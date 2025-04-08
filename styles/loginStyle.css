@@ -12,7 +12,7 @@ body {
     background-position:center center;
 }
 
-.form-login {
+.loginForm {
     width: 400px;
     height: 340px;
     background: #4e4d4d;
@@ -25,7 +25,7 @@ body {
     border-radius: 5px;
 }
 
-.form-login h5 {
+.loginForm h5 {
     margin: 0;
     text-align: center;
     height: 40px;
@@ -59,19 +59,19 @@ body {
     cursor: pointer;
 }
 
-.form-login p {
+.loginForm p {
     height: 40px;
     text-align: center;
     border-bottom: 1px solid;
 }
 
 
-.form-login a {
+.loginForm a {
     color: white;
     text-decoration: none;
     font-size: 14px;
 }
 
-.form-login a:hover {
+.loginForm a:hover {
     text-decoration: underline;
 }

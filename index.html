@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte Help Desk</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Sesión</title>
+    <link rel="stylesheet" href="styles/loginStyle.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <div class="Menus"></div>
-    <div></div>
+    <form id="loginForm" class="loginForm" >
+        <h5>Login</h5>
+        <input class="controls" type="email" id="correo" name="correo" placeholder="Correo" required>
+        <input class="controls" type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+        <input class="buttons" type="submit" value="Ingresar">
+        <p><a href="#">¿Olvidaste tu Contraseña?</a></p>
+    </form>
+
+
+    <script src="js/formulario.js"></script>
 </body>
+
 </html>

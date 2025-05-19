@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Help Desk</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
+    <div class="barra-lateral">
+        <div>
+            <div class="nombre-pagina">
+                <img class="logo" id="logo" src="../img/sinfondo.png" alt="logo">
+                <span>ADMIN</span>
+            </div>
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a id="inbox" href="#" onclick="cargarPagina('dashboard.html')">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="cargarPagina('clientes.html')">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <span>Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="cargarPagina('empleados.html')">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <span>Empleados</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="cargarPagina('tickets.html')">
+                        <ion-icon name="ticket-outline"></ion-icon>
+                        <span>Tickets</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="cargarPagina('papelera.html')">
+                        <ion-icon name="trash-outline"></ion-icon>
+                        <span>Papelera</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="linea"></div>
+
+
+
+        <div>
+            <div class="modo-oscuro">
+                <div class="info">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span>Dark Mode</span>
+                </div>
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usuario">
+                <img src="../img/admin.png" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre">Melquisedec</span>
+                        <span class="email">k2018@gmail.com</span>
+                    </div>
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aquí se cargará el contenido -->
+    <div id="contenido-principal">
+        <!-- Se cargará dinámicamente -->
+    </div>
+
+    <script>
+        function cargarPagina(ruta) {
+            fetch(ruta)
+                .then(response => {
+                    if (!response.ok) throw new Error("No se pudo cargar la página: " + ruta);
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById("contenido-principal").innerHTML = html;
+                })
+                .catch(error => {
+                    document.getElementById("contenido-principal").innerHTML = "<p>Error al cargar la página.</p>";
+                    console.error(error);
+                });
+        }
+
+        // Cargar algo por defecto
+        window.onload = () => {
+            cargarPagina("dashboard.html");
+        }
+    </script>
+
+
+    <script src="../js/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

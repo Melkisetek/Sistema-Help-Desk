@@ -37,7 +37,7 @@ var _a;
             const resultado = yield respuesta.text();
             if (resultado.trim() === 'success') {
                 alert("¡Inicio de sesión exitoso!");
-                window.location.href = "sistema/index.html";
+                window.location.href = "view/app.html";
             }
             else {
                 alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");

@@ -23,8 +23,23 @@
 
         <class class="contenido">
             <div class="formulario">
-                <button class="btnAgregar">Agregar Empleados</button>
+                <button id="openModal2"  class="btnAgregar">Agregar Cliente</button>
+
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span id="closeModal2" class="close">&times;</span>
+                        <h2>Formulario Empleado</h2>
+                        <form id="empleadoForm2">
+                            <input type="text" name="nombre" placeholder="Nombre" required />
+                            <input type="email" name="email" placeholder="Email" required />
+                            <input type="password" name="password" placeholder="Contraseña" required />
+                            <input type="tel" name="telefono" placeholder="Teléfono" required />
+                            <button type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+
             <div class="tabla">
                 <table>
                     <thead>
@@ -61,6 +76,7 @@
             </div>
         </class>
     </main>
+    <script src="../js/empleado.js"></script>
 </body>
 
 </html>

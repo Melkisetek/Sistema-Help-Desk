@@ -30,24 +30,129 @@
             <div class="columna4">
                 <ul>
                     <li><a href="#">
-                            <ion-icon name="list-outline"></ion-icon>
+                            <ion-icon name="list" class="ico"></ion-icon>
                             Todos los Tickets
                             <span class="badge">0</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <ion-icon name="list-outline"></ion-icon>
-                            Todos los Tickets
+                            <ion-icon name="mail" class="ico"></ion-icon>
+                            Tickets Pendientes
                             <span class="badge">0</span>
                         </a>
                     </li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        <a href="#">
+                            <ion-icon name="folder-open" class="ico"></ion-icon>
+                            Tickets en proceso
+                            <span class="badge">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/like.png" class="ico" alt="" width="20px" height="20px">
+                            Tickets resueltos
+                            <span class="badge">0</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
+
+            <div class="formulario">
+                <button id="openTicket" class="btnAgregar">Nuevo Ticket</button>
+
+                <div id="ticketModal" class="modal">
+                    <div class="modal-content">
+                        <span id="closeModal" class="close">&times;</span>
+                        <h3>🎫 Nuevo Ticket</h3>
+                        <form id="ticketForm">
+                            <label>Fecha
+                                <input type="date" id="fecha" required>
+                            </label>
+                            <label>Nombre
+                                <input type="text" id="nombre_usuario" required>
+                            </label>
+                            <label>Email
+                                <input type="email" id="email_cliente" required>
+                            </label>
+                            <label>Departamento
+                                <select id="departamento" required>
+                                    <option value=""  disabled selected>Seleccione</option>
+                                    <option value="Software">Software</option>
+                                    <option value="Hardware">Hardware</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </label>
+                            <label>Asunto
+                                <input type="text" id="asunto" required>
+                            </label>
+                            <label>Problema de su producto
+                                <textarea id="mensaje" rows="4" required></textarea>
+                            </label>
+                            <button type="submit" style="font-size: 15px;">Abrir ticket</button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="numero">#</th>
+                            <th>Fecha</th>
+                            <th>Serie</th>
+                            <th>Estado</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Departamento</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="numero">1</td>
+                            <td>04/04/2025</td>
+                            <td>TK81N1</td>
+                            <td>Pendiente</td>
+                            <td>Carlos Arturo</td>
+                            <td>arturo@gmail.com</td>
+                            <td>Hardware</td>
+                            <td>
+                                <button class="pdf"><img src="../img/pdf.png" width="24" title="pdf" alt=""></button>
+                                <button class="edit"><img src="../img/pencil.png" width="25" title="Editar"
+                                        alt=""></button>
+                                <button class="trash" title="Eliminar"><ion-icon name="trash-bin"
+                                        class="trash_bin"></ion-icon></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="numero">2</td>
+                            <td>04/05/2025</td>
+                            <td>TK87N2</td>
+                            <td>Resuelto</td>
+                            <td>Lisa Ortiz</td>
+                            <td>ortilis@gmail.com</td>
+                            <td>Software</td>
+                            <td>
+                                <button class="pdf"><img src="../img/pdf.png" width="24" title="pdf" alt=""></button>
+                                <button class="edit"><img src="../img/pencil.png" width="25" title="Editar"
+                                        alt=""></button>
+                                <button class="trash" title="Eliminar"><ion-icon name="trash-bin"
+                                        class="trash_bin"></ion-icon></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </main>
+    <script src="../js/tickets.js"></script>
 </body>
 
 </html>

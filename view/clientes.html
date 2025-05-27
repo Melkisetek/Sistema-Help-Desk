@@ -23,8 +23,24 @@
 
         <div class="contenido">
             <div class="formulario">
-                <button class="btnAgregar">Agregar Cliente</button>
+                <button id="openModal"  class="btnAgregar">Agregar Cliente</button>
+
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span id="closeModal" class="close">&times;</span>
+                        <h2>Formulario Cliente</h2>
+                        <form id="clienteForm">
+                            <input type="text" name="nombre" placeholder="Nombre" required />
+                            <input type="email" name="email" placeholder="Email" required />
+                            <input type="password" name="contrasena" placeholder="Contraseña" required />
+                            <input type="tel" name="telefono" placeholder="Teléfono" required />
+                            <button type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
+
             <div class="tabla">
                 <table>
                     <thead>
@@ -60,8 +76,8 @@
                 </table>
             </div>
         </div>
-
     </main>
+    <script src="../js/cliente.js"></script>
 </body>
 
 </html>

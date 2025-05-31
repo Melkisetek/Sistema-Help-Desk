@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/clientes/estadoTicket.css">
+
+<body>
+    <main>
+        <div class="estadoTicket">
+            <div class="titulo">
+                <ion-icon name="link-outline"></ion-icon>
+                <strong>Comprobar estado de Ticket</strong>
+            </div>
+            <img src="../../img/old_ticket.png" alt="addticket" class="imgTicket">
+            <div class="txtTicket">Consultar estado de Ticket</div>
+            <form class="form-vertical" id="ticketForm" enctype="multipart/form-data" method="post">
+                <label>Correo
+                    <input type="email" id="fecha" name="fecha" placeholder="Email" required>
+                </label>
+                <label>ID Ticket
+                    <input type="text" id="id_ticket" name="id_ticket" placeholder="ID Ticket" required>
+                </label>
+                <button class="btnBoton" type="submit" style="font-size: 18px;">Consultar</button>
+            </form>
+    </main>
+
+</body>
+
+</html>

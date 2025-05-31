@@ -20,20 +20,20 @@ var _a;
         }
         const correo = correoInput.value;
         const contrasena = contrasenaInput.value;
-        const formData = new FormData();
-        formData.append("correo", correo);
-        formData.append("contrasena", contrasena);
+        const formData2 = new FormData();
+        formData2.append("correo", correo);
+        formData2.append("contrasena", contrasena);
         try {
-            const respuesta = yield fetch('php/login.php', {
+            const respuesta = yield fetch('php/cliente/login_cliente.php', {
                 method: 'POST',
-                body: formData
+                body: formData2
             });
             const resultado = yield respuesta.text();
             const res = resultado.trim();
             console.log('Respuesta del servidor:', res);
-            if (res === 'success_admin') {
-                alert("¡Inicio de sesión exitoso como ADMINISTRADOR!");
-                window.location.href = "view/app.html";
+            if (res === 'success_cliente') {
+                alert("¡Inicio de sesión exitoso como CLIENTE!");
+                window.location.href = "view/cliente/clienteMenu.html";
             }
             else {
                 alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");

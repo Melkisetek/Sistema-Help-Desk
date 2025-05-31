@@ -21,8 +21,7 @@ if ($conexion->connect_error) {
 
 
 // Consulta segura usando prepared statements (anti-SQL Injection)
-//$stmt = $conexion->prepare("SELECT contrasena FROM Help_Desk.Administradores WHERE Correo = ?");
-$stmt = $conexion->prepare("SELECT * FROM Help_Desk.Administradores WHERE correo = ? AND contrasena = ? "); //#2
+$stmt = $conexion->prepare("SELECT * FROM Help_Desk.clientes WHERE correo = ? AND contrasena = ? "); //#2
 
 $stmt->bind_param("ss", $correo, $contrasena);
 // Ejecutar y verificar el resultado
@@ -31,7 +30,7 @@ $resultado = $stmt->get_result();
 
 // Verificar si se encontró el correo
 if ($resultado->num_rows > 0) {
-    echo "success_admin";
+    echo "success_cliente";
     
 }
 else {

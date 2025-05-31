@@ -8,7 +8,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// Mostrar y ocultar modal
 const modal3 = document.getElementById("ticketModal");
 const openTicket = document.getElementById("openTicket");
 const closeTicket = document.getElementById("closeModal");
@@ -23,7 +22,6 @@ window.addEventListener("click", (e) => {
         modal3.style.display = "none";
     }
 });
-// Envío de datos del formulario
 document.getElementById("ticketForm").addEventListener("submit", (e) => __awaiter(void 0, void 0, void 0, function* () {
     e.preventDefault();
     const data = {

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo ticket</title>
+    <link rel="stylesheet" href="../../styles/clientes/nuevoTicket.css">
+</head>
+
+<body>
+    <main>
+        <div class="nuevoTicket">
+            <div class="titulo">
+                <ion-icon name="document-text"></ion-icon>
+                <strong>Nuevo Ticket</strong>
+            </div>
+            <img src="../../img/addTicket.png" alt="addticket" class="imgTicket">
+            <div class="txtTicket">Abrir un nuevo ticket</div>
+            <p>
+                Si tienes un problema con cualquiera de nuestros productos reportalo creando un nuevo ticket
+                y te ayudaremos a solucionarlo.Si desea actualizar una peticion ya realizada utiliza el formulario
+                de Comprobar estado de Ticket, solamente los <b>usuarios registrados</b> pueden abrir un nuevo
+                ticket.
+            </p>
+            <br>
+            <p>Para abrir un nuevo <b>ticket</b> has click en el siguente boton</p>
+            <div class="formulario">
+                <button id="openTicket" class="btnAgregar">Nuevo Ticket</button>
+
+
+                <div id="ticketModal" class="modal">
+                    <div class="modal-content">
+                        <span id="closeModal" class="close">&times;</span>
+                        <h3>🎫 Nuevo Ticket</h3>
+                        <form id="ticketForm" enctype="multipart/form-data" method="post">
+                            <label>Fecha
+                                <input type="date" id="fecha" name="fecha" required>
+                            </label>
+                            <label>Nombre
+                                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                            </label>
+                            <label>Email
+                                <input type="email" id="email_cliente" name="email_cliente" required>
+                            </label>
+                            <label>Departamento
+                                <select id="departamento" name="departamento" required>
+                                    <option value="" disabled selected>Seleccione</option>
+                                    <option value="Software">Software</option>
+                                    <option value="Hardware">Hardware</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </label>
+                            <label>Asunto
+                                <input type="text" id="asunto" name="asunto" required>
+                            </label>
+                            <label>Problema de su producto
+                                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                            </label>
+                            <label for="">
+                                <input type="file" name="archivo" />
+                            </label>
+                            <button type="submit" style="font-size: 18px;">Abrir ticket</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../../js/cliente/ticket_cliente.js"></script>
+
+</body>
+
+</html>

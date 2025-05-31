@@ -41,7 +41,7 @@
             </div>
 
             <div class="tabla">
-                <table>
+                <table id="tablaEmpleados">
                     <thead>
                         <tr>
                             <th class="numero">#</th>
@@ -53,30 +53,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="numero">1</td>
-                            <td>Carlos Arturo</td>
-                            <td>carlos23@gmail.com</td>
-                            <td>HolaMundo2</td>
-                            <td>+50245783412</td>
-                            <td><button class="trash" title="Eliminar"><ion-icon name="trash-bin"></ion-icon></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="numero">2</td>
-                            <td>Luis Miguel</td>
-                            <td>miguel@gmail.com</td>
-                            <td>2025gta</td>
-                            <td>+50290324590</td>
-                            <td><button class="trash" title="Eliminar"><ion-icon name="trash-bin"></ion-icon></button>
-                            </td>
-                        </tr>
+                     <!-- Filas se insertan desde JavaScript -->
                     </tbody>
                 </table>
             </div>
         </class>
     </main>
     <script src="../js/empleado.js"></script>
+    <script src="../js/obtener_empleados.js" type="module"></script>
 </body>
 
 </html>

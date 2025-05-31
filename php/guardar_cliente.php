@@ -7,24 +7,24 @@ error_reporting(E_ALL);
 require 'db_config.php';
 
 $nombre = $_POST['nombre'];
-$email = $_POST['email'];
+$correo = $_POST['correo'];
 $contrasena = $_POST['contrasena'];
 // Hasheada la contraseña
 /* $contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT); */
 $telefono = $_POST['telefono'];
 
 
-if (empty($nombre) || empty($email) || empty($contrasena) || empty($telefono)) {
+if (empty($nombre) || empty($correo) || empty($contrasena) || empty($telefono)) {
   echo "Error: Todos los campos son obligatorios.";
   exit;
 }
 // Create connection
 
-$sql = "INSERT INTO Help_Desk.clientes (nombre, email, contrasena,	telefono)
+$sql = "INSERT INTO Help_Desk.clientes (nombre, correo, contrasena,	telefono)
         VALUES (?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssss", $nombre, $email, $contrasena, $telefono);
+$stmt->bind_param("ssss", $nombre, $correo, $contrasena, $telefono);
 
 if($stmt->execute()) {
   echo "Cliente guardado exitosamente ";
@@ -34,3 +34,9 @@ if($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
+
+?>
+
+
+
+

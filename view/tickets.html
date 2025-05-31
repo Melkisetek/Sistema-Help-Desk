@@ -100,7 +100,7 @@
             </div>
 
             <div class="tabla">
-                <table>
+                <table id="tablaTickets">
                     <thead>
                         <tr>
                             <th class="numero">#</th>
@@ -114,38 +114,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="numero">1</td>
-                            <td>04/04/2025</td>
-                            <td>TK81N1</td>
-                            <td>Pendiente</td>
-                            <td>Carlos Arturo</td>
-                            <td>arturo@gmail.com</td>
-                            <td>Hardware</td>
-                            <td>
-                                <button class="pdf"><img src="../img/pdf.png" width="24" title="pdf" alt=""></button>
-                                <button class="edit"><img src="../img/pencil.png" width="25" title="Editar"
-                                        alt=""></button>
-                                <button class="trash" title="Eliminar"><ion-icon name="trash-bin"
-                                        class="trash_bin"></ion-icon></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="numero">2</td>
-                            <td>04/05/2025</td>
-                            <td>TK87N2</td>
-                            <td>Resuelto</td>
-                            <td>Lisa Ortiz</td>
-                            <td>ortilis@gmail.com</td>
-                            <td>Software</td>
-                            <td>
-                                <button class="pdf"><img src="../img/pdf.png" width="24" title="pdf" alt=""></button>
-                                <button class="edit"><img src="../img/pencil.png" width="25" title="Editar"
-                                        alt=""></button>
-                                <button class="trash" title="Eliminar"><ion-icon name="trash-bin"
-                                        class="trash_bin"></ion-icon></button>
-                            </td>
-                        </tr>
+                         <!-- Filas se insertan desde JavaScript -->
                     </tbody>
                 </table>
             </div>
@@ -153,6 +122,7 @@
         </div>
     </main>
     <script src="../js/tickets.js"></script>
+    <script src="../js/obtener_tickets.js" type="module"></script>
 </body>
 
 </html>

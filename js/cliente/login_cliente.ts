@@ -12,9 +12,9 @@ document.getElementById("loginForm")?.addEventListener('submit', async function 
     const correo = correoInput.value;
     const contrasena = contrasenaInput.value;
 
-    const formData = new FormData();
-    formData.append("correo", correo);
-    formData.append("contrasena", contrasena);
+    const formData2 = new FormData();
+    formData2.append("correo", correo);
+    formData2.append("contrasena", contrasena);
 
     try {
         /**
@@ -23,18 +23,18 @@ document.getElementById("loginForm")?.addEventListener('submit', async function 
 
          */
         // Enviar la solicitud al servidor
-        const respuesta = await fetch('php/login.php', {
+        const respuesta = await fetch('php/cliente/login_cliente.php', {
             method: 'POST',
-            body: formData
+            body: formData2
         });
 
         const resultado = await respuesta.text();
         const res = resultado.trim(); // Limpiamos espacios
         console.log('Respuesta del servidor:', res);
 
-        if (res === 'success_admin') {
-            alert("¡Inicio de sesión exitoso como ADMINISTRADOR!");
-            window.location.href = "view/app.html";
+        if (res === 'success_cliente') {
+            alert("¡Inicio de sesión exitoso como CLIENTE!");
+            window.location.href = "view/cliente/clienteMenu.html";
 
         } 
         else {

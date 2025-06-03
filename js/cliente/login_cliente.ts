@@ -38,11 +38,12 @@ document.getElementById("loginForm")?.addEventListener('submit', async function 
 
         } 
         else {
-            alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
+           /* alert("Credenciales incorrectas. Por favor, inténtalo de nuevo."); */
         }
+         
     } catch (error) {
         console.error('Error durante la solicitud:', error);
-        alert('Hubo un error al intentar iniciar sesión.');
+       /*  alert('Hubo un error al intentar iniciar sesión.'); */
     }
 
     // Limpiar los campos del formulario

@@ -24,9 +24,9 @@ function cargarTickets() {
         <td>${ticket.nombre_usuario}</td>
         <td>${ticket.email_cliente}</td>
         <td>${ticket.departamento}</td>
-        <td><button class="pdf"><img src="../img/pdf.png" width="24" title="pdf" alt=""></button>
-            <button class="edit"><img src="../img/pencil.png" width="25" title="Editar" alt=""></button>
-            <button class="trash" title="Eliminar"><ion-icon name="trash-bin" class="trash_bin"></ion-icon></button>
+        <td><button onclick="generarPDF('${ticket.serie}')" class="pdf"><img src="../img/pdf.png" width="24" title="pdf" alt=""></button>
+            <button onclick="abrirModalEditar('${ticket.serie}')" class="edit"><img src="../img/pencil.png" width="25" title="Editar" alt=""></button>
+            <button onclick="eliminarTicket('${ticket.serie}')" class="trash" title="Eliminar"><ion-icon name="trash-bin" class="trash_bin"></ion-icon></button>
         </td>
         
       `;

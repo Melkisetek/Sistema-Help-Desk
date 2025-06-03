@@ -36,12 +36,10 @@ var _a;
                 window.location.href = "view/cliente/clienteMenu.html";
             }
             else {
-                alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
             }
         }
         catch (error) {
             console.error('Error durante la solicitud:', error);
-            alert('Hubo un error al intentar iniciar sesión.');
         }
         if (correoInput)
             correoInput.value = '';

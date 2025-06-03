@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar Ticket</title>
+  <link rel="stylesheet" href="../../styles/clientes/estadoticket.css">
+</head>
+
+<body>
+  <div class="ticket-card">
+    <div class="header">
+      <span>🎫 Ticket <span id="serie"></span></span>
+    </div>
+    <div class="contenido">
+      <div><strong>Fecha:</strong> <span id="fecha"></span></div>
+      <div><strong>Estado:</strong> <span id="estado"></span></div>
+      <div><strong>Nombre:</strong> <span id="nombre"></span></div>
+      <div><strong>Email:</strong> <span id="email"></span></div>
+      <div><strong>Departamento:</strong> <span id="departamento"></span></div>
+      <div><strong>Asunto:</strong> <span id="asunto"></span></div>
+      <div><strong>Problema:</strong> <span id="mensaje"></span></div>
+      <div><strong>Solución:</strong> <span id="solucion"></span></div>
+    </div>
+    <div class="botones">
+      <button onclick="eliminarTicketCliente()">🗑 Eliminar ticket</button>
+      <button onclick="window.print()">💾 Guardar ticket en PDF</button>
+    </div>
+  </div>
+  <script src="../../js/cliente/estado_ticket.js"></script>
+</body>
+
+</html>

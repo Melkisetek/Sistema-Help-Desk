@@ -18,7 +18,7 @@ $asunto = $conn->real_escape_string($data['asunto']);
 $mensaje = $conn->real_escape_string($data['mensaje']);
 
 $sql = "INSERT INTO Help_Desk.ticket (fecha,	serie,	estado_ticket,	nombre_usuario,	email_cliente,	departamento,	asunto,	mensaje,	solucion)
-        VALUES ('$fecha', 'clave28', '', '$nombre_usuario', '$email_cliente', '$departamento', '$asunto', '$mensaje', '')";
+        VALUES ('$fecha', 'clave2', '', '$nombre_usuario', '$email_cliente', '$departamento', '$asunto', '$mensaje', '')";
 
 if ($conn->query($sql) === TRUE) {
   echo "✅ Ticket guardado correctamente.";

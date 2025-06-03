@@ -13,7 +13,7 @@
         <div class="header">
             <div style="font-size: 30px; font-weight: 600; color: #34495e;">Panel Administrativo</div>
             <div class="fechaHora">
-                <div class="time" style="display: inline;">05/05/2025</div>
+                <div class="time" style="display: inline;">03/06/2025</div>
                 <ion-icon class="iconDate" name="calendar-outline"></ion-icon>
             </div>
             <div class="linea"></div>
@@ -78,7 +78,7 @@
                             </label>
                             <label>Departamento
                                 <select id="departamento" required>
-                                    <option value=""  disabled selected>Seleccione</option>
+                                    <option value="" disabled selected>Seleccione</option>
                                     <option value="Software">Software</option>
                                     <option value="Hardware">Hardware</option>
                                     <option value="Otro">Otro</option>
@@ -113,16 +113,54 @@
                             <th>Opciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                         <!-- Filas se insertan desde JavaScript -->
+                    <tbody id="tablaTicketsBody">
+                        <!-- Filas se insertan desde JavaScript -->
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Ventana emergente (modal) para editar -->
+            <div id="modalEditar" class="modal2">
+                <div class="modal-contenido">
+                    <h3>Modificar Ticket</h3>
+                    <form id="formEditar">
+                        <label>Estado:
+                            <select id="estadoEditar">
+                                <option value="Abierto">Abierto</option>
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="Cerrado">Resuelto</option>
+                            </select>
+                        </label>
+                        <label>Departamento:
+                            <input type="text" id="departamentoEditar">
+                        </label>
+                        <label>Asunto:
+                            <input type="text" id="asuntoEditar">
+                        </label>
+                        <label>Mensaje:
+                            <textarea id="mensajeEditar"></textarea>
+                        </label>
+                        <label>Solución:
+                            <textarea id="solucionEditar"></textarea>
+                        </label>
+                        <input type="hidden" id="serieEditar">
+                        <div class="acciones">
+                            <button type="submit">Guardar</button>
+                            <button type="button" onclick="cerrarModal()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </div>
     </main>
     <script src="../js/tickets.js"></script>
     <script src="../js/obtener_tickets.js" type="module"></script>
+    <script src="../js/ticket/script.js" type="module"></script>
+    <script src="../js/ticket/pdf_button.js"></script>
+    <script src="../js/ticket/eliminar_ticket.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
